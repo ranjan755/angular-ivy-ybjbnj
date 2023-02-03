@@ -1,13 +1,23 @@
-<p>Server</p>
-<input type="text" class="form-control" [(ngModel)]="servername" />
-<button
-  class="btn btn-primary"
-  [disabled]="allowserver"
-  (click)="oncreateserver()"
->
-  add server
-</button>
-<p *ngIf="servercreated">server is created. server name is {{ servername }}</p>
-<ng-template #noserver>
-  <p>no server is created</p>
-</ng-template>
+import { Component, VERSION } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+})
+export class AppComponent {
+  users = [
+    {
+    id:1,
+    name:'jay'
+    },
+    {
+      id:2,
+      name:'Prince'
+    },
+    {
+      id:3,
+      name:'Ankit'
+    }
+  ]
+}
